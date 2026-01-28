@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/UnitTests.dir/tests/unit/test_scanner.cpp.o -o bin/UnitTests  lib/libMediaPlayerCore.a lib/libgmock_main.a -ltag -lz -lavformat -lavcodec -lswresample -lavutil -lSDL2 lib/libgmock.a lib/libgtest.a 

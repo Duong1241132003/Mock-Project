@@ -14,6 +14,11 @@ bool LinuxFileSystem::isDirectory(const std::string& path) const {
     return fs::is_directory(path, ec);
 }
 
+bool LinuxFileSystem::isSymlink(const std::string& path) const {
+    std::error_code ec;
+    return fs::is_symlink(path, ec);
+}
+
 std::vector<std::string> LinuxFileSystem::listEntries(const std::string& path) const {
     std::vector<std::string> entries;
     std::error_code ec;

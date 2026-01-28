@@ -1,110 +1,80 @@
 [
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/controller/PlaybackController.cpp.o -c /home/duong/MediaPlayerProject/src/controller/PlaybackController.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/controller/PlaybackController.cpp.o -c /home/duong/MediaPlayerProject/src/controller/PlaybackController.cpp",
   "file": "/home/duong/MediaPlayerProject/src/controller/PlaybackController.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/controller/PlaybackController.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/model/MediaLibrary.cpp.o -c /home/duong/MediaPlayerProject/src/model/MediaLibrary.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/model/MediaLibrary.cpp.o -c /home/duong/MediaPlayerProject/src/model/MediaLibrary.cpp",
   "file": "/home/duong/MediaPlayerProject/src/model/MediaLibrary.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/model/MediaLibrary.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/model/PlaybackHistory.cpp.o -c /home/duong/MediaPlayerProject/src/model/PlaybackHistory.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/model/PlaybackHistory.cpp.o -c /home/duong/MediaPlayerProject/src/model/PlaybackHistory.cpp",
   "file": "/home/duong/MediaPlayerProject/src/model/PlaybackHistory.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/model/PlaybackHistory.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/model/Playlist.cpp.o -c /home/duong/MediaPlayerProject/src/model/Playlist.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/model/Playlist.cpp.o -c /home/duong/MediaPlayerProject/src/model/Playlist.cpp",
   "file": "/home/duong/MediaPlayerProject/src/model/Playlist.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/model/Playlist.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/PlaylistManager.cpp.o -c /home/duong/MediaPlayerProject/src/service/PlaylistManager.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/PlaylistManager.cpp.o -c /home/duong/MediaPlayerProject/src/service/PlaylistManager.cpp",
   "file": "/home/duong/MediaPlayerProject/src/service/PlaylistManager.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/service/PlaylistManager.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/decoder/FFmpegAudioDecoder.cpp.o -c /home/duong/MediaPlayerProject/src/service/decoder/FFmpegAudioDecoder.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/decoder/FFmpegAudioDecoder.cpp.o -c /home/duong/MediaPlayerProject/src/service/decoder/FFmpegAudioDecoder.cpp",
   "file": "/home/duong/MediaPlayerProject/src/service/decoder/FFmpegAudioDecoder.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/service/decoder/FFmpegAudioDecoder.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/metadata/TagLibMetadataService.cpp.o -c /home/duong/MediaPlayerProject/src/service/metadata/TagLibMetadataService.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/metadata/TagLibMetadataService.cpp.o -c /home/duong/MediaPlayerProject/src/service/metadata/TagLibMetadataService.cpp",
   "file": "/home/duong/MediaPlayerProject/src/service/metadata/TagLibMetadataService.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/service/metadata/TagLibMetadataService.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/player/AudioThreadWorker.cpp.o -c /home/duong/MediaPlayerProject/src/service/player/AudioThreadWorker.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/player/AudioThreadWorker.cpp.o -c /home/duong/MediaPlayerProject/src/service/player/AudioThreadWorker.cpp",
   "file": "/home/duong/MediaPlayerProject/src/service/player/AudioThreadWorker.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/service/player/AudioThreadWorker.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/player/SDLAudioPlayer.cpp.o -c /home/duong/MediaPlayerProject/src/service/player/SDLAudioPlayer.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/player/SDLAudioPlayer.cpp.o -c /home/duong/MediaPlayerProject/src/service/player/SDLAudioPlayer.cpp",
   "file": "/home/duong/MediaPlayerProject/src/service/player/SDLAudioPlayer.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/service/player/SDLAudioPlayer.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/scanner/FileScanner.cpp.o -c /home/duong/MediaPlayerProject/src/service/scanner/FileScanner.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/scanner/FileScanner.cpp.o -c /home/duong/MediaPlayerProject/src/service/scanner/FileScanner.cpp",
   "file": "/home/duong/MediaPlayerProject/src/service/scanner/FileScanner.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/service/scanner/FileScanner.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/scanner/LinuxFileSystem.cpp.o -c /home/duong/MediaPlayerProject/src/service/scanner/LinuxFileSystem.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/scanner/LinuxFileSystem.cpp.o -c /home/duong/MediaPlayerProject/src/service/scanner/LinuxFileSystem.cpp",
   "file": "/home/duong/MediaPlayerProject/src/service/scanner/LinuxFileSystem.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/service/scanner/LinuxFileSystem.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistRepository.cpp.o -c /home/duong/MediaPlayerProject/src/service/scanner/repository/JsonPlaylistRepository.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistRepository.cpp.o -c /home/duong/MediaPlayerProject/src/service/scanner/repository/JsonPlaylistRepository.cpp",
   "file": "/home/duong/MediaPlayerProject/src/service/scanner/repository/JsonPlaylistRepository.cpp",
   "output": "CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistRepository.cpp.o"
 },
 {
   "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o -c /home/duong/MediaPlayerProject/src/main.cpp",
+  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -std=gnu++17 -o CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o -c /home/duong/MediaPlayerProject/src/main.cpp",
   "file": "/home/duong/MediaPlayerProject/src/main.cpp",
   "output": "CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o"
-},
-{
-  "directory": "/home/duong/MediaPlayerProject/build",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/include -I/usr/include/taglib -I/usr/include/SDL2 -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googlemock/include -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googlemock -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest/include -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/UnitTests.dir/tests/unit/test_scanner.cpp.o -c /home/duong/MediaPlayerProject/tests/unit/test_scanner.cpp",
-  "file": "/home/duong/MediaPlayerProject/tests/unit/test_scanner.cpp",
-  "output": "CMakeFiles/UnitTests.dir/tests/unit/test_scanner.cpp.o"
-},
-{
-  "directory": "/home/duong/MediaPlayerProject/build/_deps/googletest-build/googlemock",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/build/_deps/googletest-src/googlemock/include -I/home/duong/MediaPlayerProject/build/_deps/googletest-src/googlemock -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest/include -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest -O3 -DNDEBUG -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/duong/MediaPlayerProject/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
-  "file": "/home/duong/MediaPlayerProject/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
-  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
-},
-{
-  "directory": "/home/duong/MediaPlayerProject/build/_deps/googletest-build/googlemock",
-  "command": "/usr/bin/c++  -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googlemock/include -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googlemock -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest/include -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest -O3 -DNDEBUG -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/duong/MediaPlayerProject/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
-  "file": "/home/duong/MediaPlayerProject/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
-  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
-},
-{
-  "directory": "/home/duong/MediaPlayerProject/build/_deps/googletest-build/googletest",
-  "command": "/usr/bin/c++  -I/home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest/include -I/home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest -O3 -DNDEBUG -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest/src/gtest-all.cc",
-  "file": "/home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest/src/gtest-all.cc",
-  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-},
-{
-  "directory": "/home/duong/MediaPlayerProject/build/_deps/googletest-build/googletest",
-  "command": "/usr/bin/c++  -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest/include -isystem /home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest -O3 -DNDEBUG -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest/src/gtest_main.cc",
-  "file": "/home/duong/MediaPlayerProject/build/_deps/googletest-src/googletest/src/gtest_main.cc",
-  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
 }
 ]

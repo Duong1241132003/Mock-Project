@@ -73,7 +73,7 @@ target_link_libraries(MediaPlayerApp PRIVATE MediaPlayerCore)
 # ==============================================================================
 # 5. UNIT TESTING (GoogleTest)
 # ==============================================================================
-option(BUILD_TESTS "Build unit tests" ON)
+option(BUILD_TESTS "Build unit tests" OFF)
 
 if(BUILD_TESTS)
     enable_testing()

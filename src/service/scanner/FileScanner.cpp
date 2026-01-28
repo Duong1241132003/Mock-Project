@@ -18,6 +18,11 @@ std::vector<MediaFile> FileScanner::scanDirectory(const std::string& rootPath) {
     std::vector<std::string> entries = m_fileSystem->listEntries(rootPath);
 
     for (const auto& entryPath : entries) {
+        // Guard: Skip symbolic links to avoid infinite recursion loops
+        if (m_fileSystem->isSymlink(entryPath)) {
+            continue;
+        }
+
         if (m_fileSystem->isDirectory(entryPath)) {
             // RECURSION: Scan subdirectory and merge results
             std::vector<MediaFile> subResults = scanDirectory(entryPath);

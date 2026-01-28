@@ -12,6 +12,7 @@ public:
     bool exists(const std::string& path) const override;
     bool isDirectory(const std::string& path) const override;
     std::vector<std::string> listEntries(const std::string& path) const override;
+    bool isSymlink(const std::string& path) const override;
 };
 
 #endif // LINUXFILESYSTEM_H

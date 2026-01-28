@@ -20,6 +20,9 @@ public:
 
     // Returns a list of full paths representing the contents of the directory
     virtual std::vector<std::string> listEntries(const std::string& path) const = 0;
+
+    // Checks if the path refers to a symbolic link
+    virtual bool isSymlink(const std::string& path) const = 0;
 };
 
 #endif // IFILESYSTEM_H

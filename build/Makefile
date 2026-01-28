@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /home/duong/MediaPlayerProject/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -94,51 +84,6 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -196,71 +141,6 @@ MediaPlayerApp: cmake_check_build_system
 MediaPlayerApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaPlayerApp.dir/build.make CMakeFiles/MediaPlayerApp.dir/build
 .PHONY : MediaPlayerApp/fast
-
-#=============================================================================
-# Target rules for targets named UnitTests
-
-# Build rule for target.
-UnitTests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UnitTests
-.PHONY : UnitTests
-
-# fast build rule for target.
-UnitTests/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UnitTests.dir/build.make CMakeFiles/UnitTests.dir/build
-.PHONY : UnitTests/fast
-
-#=============================================================================
-# Target rules for targets named gmock
-
-# Build rule for target.
-gmock: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
-.PHONY : gmock
-
-# fast build rule for target.
-gmock/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-.PHONY : gmock/fast
-
-#=============================================================================
-# Target rules for targets named gmock_main
-
-# Build rule for target.
-gmock_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
-.PHONY : gmock_main
-
-# fast build rule for target.
-gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-.PHONY : gmock_main/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
 
 src/controller/PlaybackController.o: src/controller/PlaybackController.cpp.o
 .PHONY : src/controller/PlaybackController.o
@@ -574,30 +454,6 @@ src/service/scanner/repository/JsonPlaylistRepository.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaPlayerCore.dir/build.make CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistRepository.cpp.s
 .PHONY : src/service/scanner/repository/JsonPlaylistRepository.cpp.s
 
-tests/unit/test_scanner.o: tests/unit/test_scanner.cpp.o
-.PHONY : tests/unit/test_scanner.o
-
-# target to build an object file
-tests/unit/test_scanner.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UnitTests.dir/build.make CMakeFiles/UnitTests.dir/tests/unit/test_scanner.cpp.o
-.PHONY : tests/unit/test_scanner.cpp.o
-
-tests/unit/test_scanner.i: tests/unit/test_scanner.cpp.i
-.PHONY : tests/unit/test_scanner.i
-
-# target to preprocess a source file
-tests/unit/test_scanner.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UnitTests.dir/build.make CMakeFiles/UnitTests.dir/tests/unit/test_scanner.cpp.i
-.PHONY : tests/unit/test_scanner.cpp.i
-
-tests/unit/test_scanner.s: tests/unit/test_scanner.cpp.s
-.PHONY : tests/unit/test_scanner.s
-
-# target to generate assembly for a file
-tests/unit/test_scanner.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UnitTests.dir/build.make CMakeFiles/UnitTests.dir/tests/unit/test_scanner.cpp.s
-.PHONY : tests/unit/test_scanner.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -605,19 +461,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... MediaPlayerApp"
 	@echo "... MediaPlayerCore"
-	@echo "... UnitTests"
-	@echo "... gmock"
-	@echo "... gmock_main"
-	@echo "... gtest"
-	@echo "... gtest_main"
 	@echo "... src/controller/PlaybackController.o"
 	@echo "... src/controller/PlaybackController.i"
 	@echo "... src/controller/PlaybackController.s"
@@ -657,9 +503,6 @@ help:
 	@echo "... src/service/scanner/repository/JsonPlaylistRepository.o"
 	@echo "... src/service/scanner/repository/JsonPlaylistRepository.i"
 	@echo "... src/service/scanner/repository/JsonPlaylistRepository.s"
-	@echo "... tests/unit/test_scanner.o"
-	@echo "... tests/unit/test_scanner.i"
-	@echo "... tests/unit/test_scanner.s"
 .PHONY : help
 
 

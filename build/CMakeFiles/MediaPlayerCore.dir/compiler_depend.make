@@ -5,6 +5,7 @@ CMakeFiles/MediaPlayerCore.dir/src/controller/PlaybackController.cpp.o: /home/du
   /home/duong/MediaPlayerProject/include/controller/PlaybackController.h \
   /home/duong/MediaPlayerProject/include/model/MediaFile.h \
   /home/duong/MediaPlayerProject/include/model/MediaMetadata.h \
+  /home/duong/MediaPlayerProject/include/service/metadata/IMetadataService.h \
   /home/duong/MediaPlayerProject/include/service/player/AudioThreadWorker.h \
   /home/duong/MediaPlayerProject/include/service/player/IAudioPlayer.h \
   /usr/include/alloca.h \
@@ -212,20 +213,13 @@ CMakeFiles/MediaPlayerCore.dir/src/controller/PlaybackController.cpp.o: /home/du
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -263,8 +257,6 @@ CMakeFiles/MediaPlayerCore.dir/src/controller/PlaybackController.cpp.o: /home/du
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
@@ -434,17 +426,10 @@ CMakeFiles/MediaPlayerCore.dir/src/model/MediaLibrary.cpp.o: /home/duong/MediaPl
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -476,8 +461,6 @@ CMakeFiles/MediaPlayerCore.dir/src/model/MediaLibrary.cpp.o: /home/duong/MediaPl
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -602,17 +585,10 @@ CMakeFiles/MediaPlayerCore.dir/src/model/PlaybackHistory.cpp.o: /home/duong/Medi
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -644,8 +620,6 @@ CMakeFiles/MediaPlayerCore.dir/src/model/PlaybackHistory.cpp.o: /home/duong/Medi
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -767,17 +741,10 @@ CMakeFiles/MediaPlayerCore.dir/src/model/Playlist.cpp.o: /home/duong/MediaPlayer
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -809,8 +776,6 @@ CMakeFiles/MediaPlayerCore.dir/src/model/Playlist.cpp.o: /home/duong/MediaPlayer
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -961,20 +926,13 @@ CMakeFiles/MediaPlayerCore.dir/src/service/PlaylistManager.cpp.o: /home/duong/Me
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -1012,8 +970,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/PlaylistManager.cpp.o: /home/duong/Me
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
@@ -1203,22 +1159,13 @@ CMakeFiles/MediaPlayerCore.dir/src/service/decoder/FFmpegAudioDecoder.cpp.o: /ho
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -1257,8 +1204,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/decoder/FFmpegAudioDecoder.cpp.o: /ho
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
@@ -1499,18 +1444,11 @@ CMakeFiles/MediaPlayerCore.dir/src/service/metadata/TagLibMetadataService.cpp.o:
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -1548,8 +1486,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/metadata/TagLibMetadataService.cpp.o:
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
@@ -1742,20 +1678,13 @@ CMakeFiles/MediaPlayerCore.dir/src/service/player/AudioThreadWorker.cpp.o: /home
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -1793,8 +1722,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/player/AudioThreadWorker.cpp.o: /home
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
@@ -2087,22 +2014,13 @@ CMakeFiles/MediaPlayerCore.dir/src/service/player/SDLAudioPlayer.cpp.o: /home/du
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -2141,8 +2059,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/player/SDLAudioPlayer.cpp.o: /home/du
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
@@ -2444,20 +2360,13 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/FileScanner.cpp.o: /home/duon
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -2495,8 +2404,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/FileScanner.cpp.o: /home/duon
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
@@ -2682,20 +2589,13 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/LinuxFileSystem.cpp.o: /home/
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -2733,8 +2633,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/LinuxFileSystem.cpp.o: /home/
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
@@ -2906,18 +2804,11 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -2955,8 +2846,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
@@ -2998,6 +2887,8 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/c++/13/unordered_set:
 
+/usr/include/c++/13/bits/unordered_set.h:
+
 /home/duong/MediaPlayerProject/include/service/scanner/IFileSystem.h:
 
 /home/duong/MediaPlayerProject/include/service/scanner/FileScanner.h:
@@ -3014,23 +2905,11 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/wmmintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/vaesintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/tsxldtrkintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/shaintrin.h:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/c++/13/ext/atomicity.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/c++/13/sstream:
 
@@ -3054,22 +2933,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/taglib/taglib_export.h:
 
-/usr/include/c++/13/bits/unordered_set.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
-/usr/include/c++/13/bits/quoted_string.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2-decl.h:
-
-/usr/include/c++/13/bits/ptr_traits.h:
-
-/usr/include/taglib/mpegheader.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
@@ -3081,10 +2944,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/time.h:
-
-/usr/include/c++/13/cmath:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
@@ -3146,6 +3005,8 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /home/duong/MediaPlayerProject/include/service/decoder/IAudioDecoder.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h:
+
 /usr/include/ctype.h:
 
 /usr/include/SDL2/SDL_gesture.h:
@@ -3167,6 +3028,8 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/include/c++/13/tr1/poly_hermite.tcc:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2intrin.h:
+
+/usr/include/c++/13/bits/exception_defines.h:
 
 /usr/include/c++/13/tr1/modified_bessel_func.tcc:
 
@@ -3226,9 +3089,15 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/x86_64-linux-gnu/libavutil/dict.h:
 
+/usr/include/c++/13/initializer_list:
+
 /usr/include/c++/13/bits/std_thread.h:
 
 /usr/include/c++/13/functional:
+
+/usr/include/SDL2/SDL_rect.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h:
 
 /usr/include/c++/13/bits/node_handle.h:
 
@@ -3260,6 +3129,14 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/c++/13/bits/basic_ios.tcc:
 
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/taglib/trefcounter.h:
+
+/usr/include/SDL2/SDL_timer.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fintrin.h:
+
 /usr/include/taglib/fileref.h:
 
 /usr/include/c++/13/typeinfo:
@@ -3267,8 +3144,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/include/c++/13/bits/cxxabi_init_exception.h:
 
 /usr/include/x86_64-linux-gnu/libavutil/mem.h:
-
-/usr/include/c++/13/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
@@ -3292,7 +3167,33 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h:
 
-/usr/include/c++/13/backward/auto_ptr.h:
+/usr/include/c++/13/bits/istream.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/c++/13/bits/locale_conv.h:
+
+/home/duong/MediaPlayerProject/include/service/player/AudioThreadWorker.h:
+
+/usr/include/c++/13/bits/postypes.h:
+
+/usr/include/x86_64-linux-gnu/libavformat/avformat.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
+
+/usr/include/c++/13/bits/hashtable_policy.h:
+
+/usr/include/c++/13/bits/std_function.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
+
+/usr/include/SDL2/SDL_touch.h:
+
+/usr/include/c++/13/bits/chrono.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/waitpkgintrin.h:
 
@@ -3318,28 +3219,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/alloca.h:
 
-/home/duong/MediaPlayerProject/include/service/player/AudioThreadWorker.h:
-
-/usr/include/c++/13/bits/postypes.h:
-
-/usr/include/x86_64-linux-gnu/libavformat/avformat.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
-
-/usr/include/c++/13/bits/hashtable_policy.h:
-
-/usr/include/c++/13/bits/std_function.h:
-
-/usr/include/SDL2/SDL_touch.h:
-
-/usr/include/c++/13/bits/istream.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/c++/13/bits/locale_conv.h:
-
 /usr/include/c++/13/ratio:
 
 /usr/include/linux/limits.h:
@@ -3355,6 +3234,8 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/include/c++/13/cwchar:
 
 /home/duong/MediaPlayerProject/include/model/MediaMetadata.h:
+
+/home/duong/MediaPlayerProject/include/service/metadata/IMetadataService.h:
 
 /usr/include/SDL2/SDL_rwops.h:
 
@@ -3373,6 +3254,8 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/include/c++/13/bits/unique_ptr.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+
+/usr/include/c++/13/backward/auto_ptr.h:
 
 /usr/include/c++/13/bits/enable_special_members.h:
 
@@ -3404,6 +3287,12 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
+/usr/include/c++/13/ext/type_traits.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/shaintrin.h:
+
 /home/duong/MediaPlayerProject/include/service/player/IAudioPlayer.h:
 
 /usr/include/c++/13/bits/basic_ios.h:
@@ -3414,7 +3303,11 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/enqcmdintrin.h:
 
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
 /usr/include/c++/13/bits/align.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/wmmintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
@@ -3427,10 +3320,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/include/c++/13/bits/locale_facets.h:
 
 /usr/include/c++/13/atomic:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/c++/13/bits/chrono.h:
 
 /usr/include/c++/13/tr1/special_function_util.h:
 
@@ -3450,8 +3339,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/c++/13/ext/numeric_traits.h:
 
-/home/duong/MediaPlayerProject/include/service/metadata/IMetadataService.h:
-
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/c++/13/backward/binders.h:
@@ -3462,11 +3349,19 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/c++/13/bits/parse_numbers.h:
 
+/usr/include/linux/errno.h:
+
+/usr/include/c++/13/bits/std_abs.h:
+
 /usr/include/SDL2/SDL_misc.h:
 
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/13/bits/stl_heap.h:
+
+/usr/include/c++/13/bits/ptr_traits.h:
+
+/usr/include/taglib/mpegheader.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
@@ -3477,8 +3372,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avxintrin.h:
 
 /usr/include/c++/13/bits/stl_tempbuf.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 /usr/include/c++/13/bits/stl_vector.h:
 
@@ -3532,12 +3425,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/c++/13/bits/stringfwd.h:
 
-/usr/include/linux/errno.h:
-
-/usr/include/c++/13/bits/std_abs.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar2-decl.h:
-
 /usr/include/x86_64-linux-gnu/libavformat/avio.h:
 
 /usr/include/c++/13/debug/debug.h:
@@ -3545,8 +3432,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/include/c++/13/bits/stl_list.h:
 
 /usr/include/c++/13/bits/shared_ptr_atomic.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
@@ -3572,8 +3457,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/x86_64-linux-gnu/libavcodec/version_major.h:
 
-/usr/include/x86_64-linux-gnu/bits/wchar2.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmiintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchiintrin.h:
@@ -3598,6 +3481,8 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/taglib/tpropertymap.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h:
+
 /usr/include/c++/13/bits/unordered_map.h:
 
 /usr/include/c++/13/bits/atomic_base.h:
@@ -3615,6 +3500,10 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/include/c++/13/stdexcept:
 
 /usr/include/c++/13/clocale:
+
+/usr/include/c++/13/cmath:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlintrin.h:
 
 /usr/include/c++/13/iosfwd:
 
@@ -3638,10 +3527,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/c++/13/ctime:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
-
-/usr/include/x86_64-linux-gnu/bits/select-decl.h:
-
 /usr/include/c++/13/debug/assertions.h:
 
 /usr/include/taglib/taglib_config.h:
@@ -3661,28 +3546,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/include/c++/13/ext/string_conversions.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmaintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/c++/13/ext/type_traits.h:
-
-/usr/include/SDL2/SDL_rect.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/taglib/trefcounter.h:
-
-/usr/include/SDL2/SDL_timer.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -3758,8 +3621,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/inttypes.h:
 
-/usr/include/x86_64-linux-gnu/bits/select2.h:
-
 /home/duong/MediaPlayerProject/include/model/Playlist.h:
 
 /usr/include/SDL2/SDL_metal.h:
@@ -3781,16 +3642,6 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/include/strings.h:
 
 /usr/include/c++/13/iomanip:
-
-/usr/include/c++/13/initializer_list:
-
-/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/clflushoptintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avxifmaintrin.h:
 
@@ -3972,6 +3823,8 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/SDL2/SDL_platform.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h:
+
 /usr/include/SDL2/SDL_quit.h:
 
 /usr/include/SDL2/SDL_shape.h:
@@ -4014,6 +3867,10 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/include/c++/13/bits/locale_facets_nonio.h:
 
+/usr/include/c++/13/bits/quoted_string.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h:
+
 /usr/include/c++/13/bits/sstream.tcc:
 
 /usr/include/c++/13/filesystem:
@@ -4047,6 +3904,10 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 /usr/lib/gcc/x86_64-linux-gnu/13/include/amxint8intrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clflushoptintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124vnniwintrin.h:
 
@@ -4112,7 +3973,11 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/tbmintrin.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h:
 
 /usr/include/c++/13/numeric:
 
@@ -4120,8 +3985,10 @@ CMakeFiles/MediaPlayerCore.dir/src/service/scanner/repository/JsonPlaylistReposi
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/pkuintrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/tbmintrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/tsxldtrkintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/vaesintrin.h:

@@ -1,5 +1,0 @@
-if(EXISTS "/home/duong/MediaPlayerProject/build/UnitTests[1]_tests.cmake")
-  include("/home/duong/MediaPlayerProject/build/UnitTests[1]_tests.cmake")
-else()
-  add_test(UnitTests_NOT_BUILT UnitTests_NOT_BUILT)
-endif()

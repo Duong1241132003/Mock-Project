@@ -1,65 +1,84 @@
 #ifndef CONTROLLER_PLAYBACK_CONTROLLER_H
 #define CONTROLLER_PLAYBACK_CONTROLLER_H
 
-#include <vector>
-#include <memory>
 #include <mutex>
+#include <functional>
+#include <string>
+#include <vector>
 #include <random>
+#include <memory>
 #include <algorithm>
-#include "model/MediaFile.h"
-#include "service/player/IAudioPlayer.h"
+
+// Dependency Interfaces
 #include "service/player/AudioThreadWorker.h"
+#include "service/metadata/IMetadataService.h"
+#include "model/MediaFile.h"
+
+enum class PlaybackState {
+    Stopped,
+    Playing,
+    Paused
+};
 
 class PlaybackController {
 public:
-    explicit PlaybackController(IAudioPlayer& player);
+    // [THAY ĐỔI] Constructor chỉ còn 2 tham số (Audio & Metadata)
+    PlaybackController(AudioThreadWorker& audioWorker,
+                       IMetadataService& metadataService);
+
     ~PlaybackController();
 
     // --- Playlist Management ---
     void setPlaylist(const std::vector<MediaFile>& playlist);
-    void playIndex(size_t index);
 
     // --- Controls ---
     void play();
-    void pause(); // Toggle logic implemented here
+    void pause();
     void stop();
     void next();
     void previous();
-
-    void setLoop(bool enabled);
-    void setShuffle(bool enabled);
-
-    void setVolume(int volume);
     void seek(int seconds);
+    void setVolume(int volume);
 
-    // --- State Queries ---
-    int getCurrentTime() const;
-    int getDuration() const;
-    bool isPlaying() const;
-    
-    // Lấy bài hát hiện tại để UI hiển thị
-    const MediaFile* getCurrentMedia() const;
+    // --- Modes ---
+    void setLoopEnabled(bool enabled);
+    void setShuffleEnabled(bool enabled);
+
+    // --- Callbacks (Output to UI) ---
+    void setOnSongChanged(std::function<void(const std::string& title, const std::string& artist)> cb);
+    void setOnPlaybackStateChanged(std::function<void(bool isPlaying)> cb);
+
+    // --- Getters ---
+    PlaybackState getState() const;
 
 private:
     // Dependencies
-    IAudioPlayer& m_player; // Direct access mainly for queries
-    std::unique_ptr<AudioThreadWorker> m_worker;
+    AudioThreadWorker& m_audioWorker;
+    IMetadataService& m_metadataService;
+    // Đã xóa S32K144ProtocolHandler
 
-    // State Data (Protected by mutex since Worker might callback here)
-    mutable std::mutex m_controllerMutex;
+    // State
+    mutable std::mutex m_mutex;
     std::vector<MediaFile> m_playlist;
     size_t m_currentIndex = 0;
-    
-    bool m_loopEnabled = false;
-    bool m_shuffleEnabled = false;
+    PlaybackState m_state = PlaybackState::Stopped;
 
-    // Random generator for shuffle
+    bool m_isLooping = false;
+    bool m_isShuffling = false;
+    int m_currentVolume = 50;
+
     std::mt19937 m_rng;
 
+    // UI Callbacks
+    std::function<void(const std::string&, const std::string&)> m_uiSongChangedCb;
+    std::function<void(bool)> m_uiStateChangedCb;
+
     // Helpers
-    void playInternal(); // Helper to send play command to worker
+    void playIndex(size_t index);
     size_t calculateNextIndex();
-    size_t calculatePrevIndex();
+    size_t calculatePreviousIndex();
+    void updateMetadataAndNotify(MediaFile& file);
+    void stopInternal(); // Helper for deadlock-free internal stop
 };
 
 #endif // CONTROLLER_PLAYBACK_CONTROLLER_H

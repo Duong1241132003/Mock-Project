@@ -6,6 +6,8 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
   /home/duong/MediaPlayerProject/include/model/MediaFile.h \
   /home/duong/MediaPlayerProject/include/model/MediaMetadata.h \
   /home/duong/MediaPlayerProject/include/service/decoder/IAudioDecoder.h \
+  /home/duong/MediaPlayerProject/include/service/metadata/IMetadataService.h \
+  /home/duong/MediaPlayerProject/include/service/metadata/TagLibMetadataService.h \
   /home/duong/MediaPlayerProject/include/service/player/AudioThreadWorker.h \
   /home/duong/MediaPlayerProject/include/service/player/IAudioPlayer.h \
   /home/duong/MediaPlayerProject/include/service/player/SDLAudioPlayer.h \
@@ -286,22 +288,13 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -339,8 +332,6 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
@@ -487,8 +478,6 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/popcntintrin.h:
@@ -544,6 +533,8 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16intrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124vnniwintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h:
 
@@ -609,6 +600,10 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
@@ -633,23 +628,9 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 
@@ -662,8 +643,6 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/select-decl.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
@@ -684,8 +663,6 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
@@ -709,17 +686,15 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 
 /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h:
 
-/usr/include/c++/13/bits/refwrap.h:
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/time.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
 
 /usr/include/c++/13/bits/quoted_string.h:
 
 /usr/include/c++/13/bits/unordered_map.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2-decl.h:
 
 /usr/include/c++/13/bits/ptr_traits.h:
 
@@ -733,11 +708,11 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 
 /usr/include/c++/13/bits/memoryfwd.h:
 
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/time.h:
-
 /usr/include/c++/13/bits/uses_allocator.h:
+
+/usr/include/strings.h:
+
+/usr/include/c++/13/iomanip:
 
 /usr/include/c++/13/bits/locale_facets_nonio.tcc:
 
@@ -770,8 +745,6 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 /usr/include/c++/13/bits/locale_conv.h:
 
 /usr/include/c++/13/bits/istream.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/wchar2-decl.h:
 
 /usr/include/c++/13/bits/erase_if.h:
 
@@ -895,47 +868,27 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 
 /usr/include/c++/13/bits/ios_base.h:
 
-/usr/include/c++/13/tr1/legendre_function.tcc:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/ia32intrin.h:
 
-/home/duong/MediaPlayerProject/include/service/player/IAudioPlayer.h:
+/usr/include/SDL2/SDL_video.h:
 
-/usr/include/SDL2/SDL_clipboard.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h:
-
-/usr/include/SDL2/SDL_thread.h:
-
-/usr/include/c++/13/bits/new_allocator.h:
-
-/usr/include/c++/13/bits/stl_uninitialized.h:
-
-/usr/include/c++/13/locale:
-
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
-/usr/include/c++/13/bits/hashtable.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h:
-
-/usr/include/SDL2/SDL_keyboard.h:
-
-/usr/include/SDL2/SDL_hidapi.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/c++/13/bits/chrono.h:
-
-/usr/include/SDL2/SDL_power.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h:
-
-/usr/include/c++/13/algorithm:
+/usr/include/c++/13/memory:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/uintrintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniint8intrin.h:
 
 /usr/include/SDL2/SDL_haptic.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h:
+
+/home/duong/MediaPlayerProject/include/service/metadata/TagLibMetadataService.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h:
+
+/usr/include/c++/13/algorithm:
+
+/usr/include/SDL2/SDL_power.h:
 
 /usr/include/c++/13/bits/postypes.h:
 
@@ -965,6 +918,50 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 
 /usr/include/c++/13/sstream:
 
+/home/duong/MediaPlayerProject/include/service/player/IAudioPlayer.h:
+
+/usr/include/SDL2/SDL_clipboard.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h:
+
+/usr/include/SDL2/SDL_thread.h:
+
+/usr/include/c++/13/bits/new_allocator.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
+
+/usr/include/c++/13/locale:
+
+/usr/include/c++/13/tr1/legendre_function.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/c++/13/bits/hashtable.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h:
+
+/usr/include/SDL2/SDL_keyboard.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/SDL2/SDL_timer.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlbwintrin.h:
+
+/usr/include/c++/13/bits/locale_facets.h:
+
+/usr/include/SDL2/SDL.h:
+
+/home/duong/MediaPlayerProject/src/main.cpp:
+
+/usr/include/c++/13/bits/parse_numbers.h:
+
+/usr/include/c++/13/bits/std_abs.h:
+
+/usr/include/SDL2/SDL_misc.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /home/duong/MediaPlayerProject/include/model/MediaFile.h:
@@ -983,13 +980,13 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 
 /usr/include/SDL2/SDL_config.h:
 
+/usr/include/SDL2/SDL_hidapi.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/13/bits/chrono.h:
+
 /usr/include/c++/13/bits/ostream.tcc:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/ia32intrin.h:
-
-/usr/include/SDL2/SDL_video.h:
-
-/usr/include/c++/13/memory:
 
 /usr/include/SDL2/SDL_locale.h:
 
@@ -1035,25 +1032,11 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 
 /home/duong/MediaPlayerProject/include/service/scanner/LinuxFileSystem.h:
 
-/home/duong/MediaPlayerProject/src/main.cpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlbwintrin.h:
-
-/usr/include/c++/13/bits/locale_facets.h:
-
-/usr/include/SDL2/SDL.h:
-
-/usr/include/c++/13/bits/parse_numbers.h:
-
-/usr/include/c++/13/bits/std_abs.h:
-
-/usr/include/SDL2/SDL_misc.h:
-
 /usr/include/SDL2/SDL_loadso.h:
 
 /usr/include/SDL2/SDL_log.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+/home/duong/MediaPlayerProject/include/service/metadata/IMetadataService.h:
 
 /usr/include/SDL2/SDL_metal.h:
 
@@ -1109,15 +1092,7 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 
 /usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/SDL2/SDL_timer.h:
-
-/usr/include/c++/13/iomanip:
-
-/usr/include/strings.h:
+/usr/include/c++/13/bits/refwrap.h:
 
 /usr/include/c++/13/bits/shared_ptr.h:
 
@@ -1234,8 +1209,6 @@ CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o: /home/duong/MediaPlayerProject/src
 /usr/lib/gcc/x86_64-linux-gnu/13/include/cetintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/select2.h:
 
 /usr/include/c++/13/cmath:
 

@@ -1,155 +1,187 @@
 #include "controller/PlaybackController.h"
 #include <iostream>
 
-PlaybackController::PlaybackController(IAudioPlayer& player)
-    : m_player(player) 
+PlaybackController::PlaybackController(AudioThreadWorker& audioWorker,
+                                       IMetadataService& metadataService)
+    : m_audioWorker(audioWorker),
+      m_metadataService(metadataService)
 {
-    // 1. Khởi tạo Random Device
     std::random_device rd;
     m_rng = std::mt19937(rd());
 
-    // 2. Khởi tạo Worker
-    // [FIX LỖI]: Truyền m_player vào constructor của Worker
-    m_worker = std::make_unique<AudioThreadWorker>(m_player);
-
-    // 3. Đăng ký Auto-Next
-    // Khi Worker phát hiện hết bài, nó sẽ gọi callback này
-    m_worker->setOnTrackFinishedCallback([this]() {
-        std::cout << "[Controller] Track finished. Auto-Next.\n";
-        this->next();
+    // Auto-Next callback từ Audio Thread
+    m_audioWorker.setOnTrackFinishedCallback([this]() {
+        this->next(); 
     });
 }
 
 PlaybackController::~PlaybackController() {
-    // Worker tự hủy trong destructor của unique_ptr
+    stop();
 }
 
 void PlaybackController::setPlaylist(const std::vector<MediaFile>& playlist) {
-    std::lock_guard<std::mutex> lock(m_controllerMutex);
-    stop(); // Dừng bài cũ
+    std::lock_guard<std::mutex> lock(m_mutex);
+    stopInternal();
     m_playlist = playlist;
     m_currentIndex = 0;
 }
 
-void PlaybackController::playIndex(size_t index) {
-    std::lock_guard<std::mutex> lock(m_controllerMutex);
-    if (index >= m_playlist.size()) return;
-    
-    m_currentIndex = index;
-    playInternal();
-}
-
 void PlaybackController::play() {
-    std::lock_guard<std::mutex> lock(m_controllerMutex);
+    std::lock_guard<std::mutex> lock(m_mutex);
+
     if (m_playlist.empty()) return;
 
-    if (m_player.isPlaying()) {
-        // Đã play rồi thì không làm gì
-    } else {
-        // [FIX LỖI]: Dùng requestPause (đóng vai trò resume) thay vì enqueue
-        m_worker->requestPause(); 
+    if (m_state == PlaybackState::Paused) {
+        m_audioWorker.requestPause(); // Resume
+        m_state = PlaybackState::Playing;
+        if (m_uiStateChangedCb) m_uiStateChangedCb(true);
+    } 
+    else if (m_state == PlaybackState::Stopped) {
+        playIndex(m_currentIndex);
     }
 }
 
 void PlaybackController::pause() {
-    // [FIX LỖI]: Dùng requestPause thay vì enqueue
-    m_worker->requestPause();
+    std::lock_guard<std::mutex> lock(m_mutex);
+    
+    if (m_state == PlaybackState::Playing) {
+        m_audioWorker.requestPause();
+        m_state = PlaybackState::Paused;
+        if (m_uiStateChangedCb) m_uiStateChangedCb(false);
+    }
+    else if (m_state == PlaybackState::Paused) {
+        // Nếu đang pause thì bấm pause lần nữa sẽ resume (Toggle)
+        // Cần nhả lock trước khi gọi play() để tránh deadlock recursive
+        // Nhưng ở đây play() dùng lock_guard cùng mutex, nếu gọi trực tiếp sẽ deadlock
+        // GIẢI PHÁP: Copy logic resume vào đây hoặc unlock trước
+        m_audioWorker.requestPause(); // Resume logic bên worker
+        m_state = PlaybackState::Playing;
+        if (m_uiStateChangedCb) m_uiStateChangedCb(true);
+    }
 }
 
 void PlaybackController::stop() {
-    // [FIX LỖI]: Dùng requestStop thay vì enqueue
-    m_worker->requestStop();
+    std::lock_guard<std::mutex> lock(m_mutex);
+    stopInternal();
+}
+
+void PlaybackController::stopInternal() {
+    m_audioWorker.requestStop();
+    m_state = PlaybackState::Stopped;
+    if (m_uiStateChangedCb) m_uiStateChangedCb(false);
 }
 
 void PlaybackController::next() {
-    std::lock_guard<std::mutex> lock(m_controllerMutex);
+    std::lock_guard<std::mutex> lock(m_mutex);
     if (m_playlist.empty()) return;
 
     m_currentIndex = calculateNextIndex();
-    playInternal();
+    playIndex(m_currentIndex);
 }
 
 void PlaybackController::previous() {
-    std::lock_guard<std::mutex> lock(m_controllerMutex);
+    std::lock_guard<std::mutex> lock(m_mutex);
     if (m_playlist.empty()) return;
 
-    m_currentIndex = calculatePrevIndex();
-    playInternal();
+    m_currentIndex = calculatePreviousIndex();
+    playIndex(m_currentIndex);
 }
 
-// --- Logic tính toán Index ---
+void PlaybackController::seek(int seconds) {
+    m_audioWorker.requestSeek(seconds);
+}
+
+void PlaybackController::setVolume(int volume) {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    m_currentVolume = std::max(0, std::min(volume, 100));
+    m_audioWorker.requestSetVolume(m_currentVolume);
+}
+
+// --- INTERNAL HELPERS ---
+
+void PlaybackController::playIndex(size_t index) {
+    if (index >= m_playlist.size()) return;
+
+    MediaFile& file = m_playlist[index];
+    std::string path = file.getPath();
+
+    m_audioWorker.requestPlay(path);
+    m_state = PlaybackState::Playing;
+
+    updateMetadataAndNotify(file);
+}
+
+void PlaybackController::updateMetadataAndNotify(MediaFile& file) {
+    // Đọc metadata
+    if (!m_metadataService.readMetadata(file)) {
+        // Fallback logic nếu cần
+    }
+
+    std::string title = file.getTitle();
+    std::string artist = file.getArtist();
+
+    // Chỉ gửi lên UI, không gửi Hardware nữa
+    if (m_uiSongChangedCb) {
+        m_uiSongChangedCb(title, artist);
+    }
+    if (m_uiStateChangedCb) {
+        m_uiStateChangedCb(true);
+    }
+}
 
 size_t PlaybackController::calculateNextIndex() {
-    if (m_shuffleEnabled) {
-        // Random trong khoảng playlist
-        std::uniform_int_distribution<size_t> dist(0, m_playlist.size() - 1);
+    size_t count = m_playlist.size();
+    if (count == 0) return 0;
+
+    if (m_isShuffling) {
+        std::uniform_int_distribution<size_t> dist(0, count - 1);
         return dist(m_rng);
     }
-    
-    // Normal + Loop
-    if (m_currentIndex + 1 >= m_playlist.size()) {
-        return m_loopEnabled ? 0 : m_currentIndex; // Loop về đầu hoặc đứng yên
+
+    if (m_currentIndex + 1 >= count) {
+        return m_isLooping ? 0 : m_currentIndex;
     }
     return m_currentIndex + 1;
 }
 
-size_t PlaybackController::calculatePrevIndex() {
+size_t PlaybackController::calculatePreviousIndex() {
+    size_t count = m_playlist.size();
+    if (count == 0) return 0;
+
+    if (m_isShuffling) {
+        std::uniform_int_distribution<size_t> dist(0, count - 1);
+        return dist(m_rng);
+    }
+
     if (m_currentIndex == 0) {
-        return m_loopEnabled ? m_playlist.size() - 1 : 0;
+        return m_isLooping ? count - 1 : 0;
     }
     return m_currentIndex - 1;
 }
 
-void PlaybackController::playInternal() {
-    // Hàm này giả định mutex đã được lock bên ngoài
-    if (m_playlist.empty()) return;
-    
-    std::string path = m_playlist[m_currentIndex].getPath();
-    
-    // [FIX LỖI]: Dùng requestPlay thay vì enqueue
-    m_worker->requestPlay(path);
+// --- SETTERS ---
+
+void PlaybackController::setLoopEnabled(bool enabled) {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    m_isLooping = enabled;
 }
 
-// --- Setters ---
-
-void PlaybackController::setLoop(bool enabled) {
-    std::lock_guard<std::mutex> lock(m_controllerMutex);
-    m_loopEnabled = enabled;
+void PlaybackController::setShuffleEnabled(bool enabled) {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    m_isShuffling = enabled;
 }
 
-void PlaybackController::setShuffle(bool enabled) {
-    std::lock_guard<std::mutex> lock(m_controllerMutex);
-    m_shuffleEnabled = enabled;
+void PlaybackController::setOnSongChanged(std::function<void(const std::string&, const std::string&)> cb) {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    m_uiSongChangedCb = cb;
 }
 
-void PlaybackController::setVolume(int volume) {
-    // [FIX LỖI]: Dùng requestSetVolume thay vì enqueue
-    m_worker->requestSetVolume(volume);
+void PlaybackController::setOnPlaybackStateChanged(std::function<void(bool)> cb) {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    m_uiStateChangedCb = cb;
 }
 
-void PlaybackController::seek(int seconds) {
-    // [FIX LỖI]: Dùng requestSeek thay vì enqueue
-    m_worker->requestSeek(seconds);
-}
-
-// --- Getters ---
-
-int PlaybackController::getCurrentTime() const {
-    return m_player.getCurrentTime();
-}
-
-int PlaybackController::getDuration() const {
-    return m_player.getDuration();
-}
-
-bool PlaybackController::isPlaying() const {
-    return m_player.isPlaying();
-}
-
-const MediaFile* PlaybackController::getCurrentMedia() const {
-    std::lock_guard<std::mutex> lock(m_controllerMutex);
-    if (m_currentIndex < m_playlist.size()) {
-        return &m_playlist[m_currentIndex];
-    }
-    return nullptr;
+PlaybackState PlaybackController::getState() const {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    return m_state;
 }

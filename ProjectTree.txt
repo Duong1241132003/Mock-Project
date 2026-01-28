@@ -1,0 +1,37 @@
+MediaPlayerProject/
+├── assets/                  # Tài nguyên tĩnh (ảnh, icon, font)
+│   ├── icons/
+│   └── images/
+├── build/                   # Thư mục chứa output khi build (cmake generation)
+├── config/                  # Các file cấu hình (config.json, settings.ini)
+├── docs/                    # Tài liệu dự án (SRS, UML, Doxygen)
+├── include/                 # [HEADER FILES] - Các file .h công khai
+│   ├── core/                # Các định nghĩa chung, Type, Enum
+│   ├── model/               # Data Structures & Business Logic
+│   ├── view/                # GUI Classes
+│   ├── controller/          # MVC Controllers
+│   ├── service/             # Các module giao tiếp phần cứng/OS
+│   │   ├── audio/           # SDL2 wrapper
+│   │   ├── metadata/        # TagLib wrapper
+│   │   ├── scanner/         # File system & USB
+│   │   └── serial/          # UART/S32K144 communication
+│   └── utils/               # Tiện ích chung (Logger, ThreadSafeQueue)
+├── src/                     # [SOURCE FILES] - Các file .cpp thực thi
+│   ├── main.cpp             # Entry point
+│   ├── model/               # Implementation của Model
+│   ├── view/                # Implementation của View
+│   ├── controller/          # Implementation của Controller
+│   ├── service/             # Implementation của Services
+│   │   ├── audio/
+│   │   ├── metadata/
+│   │   ├── scanner/
+│   │   └── serial/
+│   └── utils/
+├── tests/                   # [UNIT TESTS]
+│   ├── unit/                # Test từng module nhỏ
+│   │   ├── test_audio.cpp
+│   │   ├── test_playlist.cpp
+│   │   └── ...
+│   └── integration/         # Test tích hợp
+├── CMakeLists.txt           # File cấu hình build (CMake)
+└── README.md

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/MediaPlayerApp.dir/src/main.cpp.o -o bin/MediaPlayerApp  lib/libMediaPlayerCore.a -ltag -lz -lavformat -lavcodec -lswresample -lavutil -lSDL2 
